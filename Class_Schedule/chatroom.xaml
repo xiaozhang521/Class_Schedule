@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="Class_Schedule.chatroom"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Class_Schedule"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" FontSize="25" >sever address</TextBlock>
+            <TextBox Grid.Column="1" Name="sever_address"/>
+            <Button Grid.Column="2" Content="connect" Click="ConnectButton_Click"/>
+            <Button Grid.Column="3" Content="release" Click="ReleaseButton_Click"/>
+        </Grid>
+        <ScrollViewer Grid.Row="1" Padding="0,0,20,0">
+            <StackPanel Name="show_message" >
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Name="send_message" Grid.Column="0">
+                </TextBox>
+                <Button Name="sender" HorizontalAlignment="Right" Grid.Column="1" Click="SendButton_Click">
+                    send
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
