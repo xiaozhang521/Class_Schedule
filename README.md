@@ -1,3 +1,5 @@
 # Class_Schedule
-基于UWP，使用C#和XAML
-项目已经结束
+I use UWP(Universal Windows Platform)，and language is C# and XAML
+This software can get the major city's weather meassage,import the class html
+then can show everyday's class,and it is a chatroom client.
+The ide is visual studio 2015
